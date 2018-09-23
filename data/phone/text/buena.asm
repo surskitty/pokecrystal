@@ -1,4 +1,4 @@
-UnknownText_0xa0c28:
+BuenaPhone1MornText:
 	text "Hi, this is BUENA…"
 
 	para "Oh! Good morning,"
@@ -8,7 +8,7 @@ UnknownText_0xa0c28:
 	line "in the morning…"
 	done
 
-UnknownText_0xa0c72:
+BuenaPhone1DayText:
 	text "Hi, this is BUENA…"
 	line "Oh! Hi, <PLAY_G>!"
 
@@ -16,7 +16,7 @@ UnknownText_0xa0c72:
 	line "BUENA's show?"
 	done
 
-UnknownText_0xa0caf:
+BuenaPhone1OnAirText:
 	text "This is BUENA."
 	line "I can't come to"
 
@@ -33,7 +33,7 @@ UnknownText_0xa0caf:
 	line "after midnight!"
 	done
 
-UnknownText_0xa0d42:
+BuenaPhone1NightText:
 	text "Hi, this is BUENA…"
 	line "Oh! Hi, <PLAY_G>!"
 
@@ -44,7 +44,7 @@ UnknownText_0xa0d42:
 	line "I'm exhausted!"
 	done
 
-UnknownText_0xa0d96:
+BuenaPhone2MornText:
 	text "<PLAY_G>!"
 	line "Hi, it's BUENA!"
 
@@ -52,7 +52,7 @@ UnknownText_0xa0d96:
 	line "I decided to call!"
 	done
 
-UnknownText_0xa0dcf:
+BuenaPhone2DayText:
 	text "<PLAY_G>!"
 	line "Hi, it's BUENA!"
 
@@ -60,7 +60,7 @@ UnknownText_0xa0dcf:
 	line "to chat with!"
 	done
 
-UnknownText_0xa0e01:
+BuenaPhone2OnBreakText:
 	text "<PLAY_G>!"
 	line "Hi, it's BUENA!"
 
@@ -68,7 +68,7 @@ UnknownText_0xa0e01:
 	line "break."
 	done
 
-UnknownText_0xa0e29:
+BuenaPhone2NightText:
 	text "<PLAY_G>!"
 	line "Hi, it's BUENA!"
 
@@ -76,7 +76,7 @@ UnknownText_0xa0e29:
 	line "so I called you."
 	done
 
-UnknownText_0xa0e5e:
+BuenaPhoneRocketText:
 	text "Oh. Hi, <PLAY_G>!"
 
 	para "You are how?"

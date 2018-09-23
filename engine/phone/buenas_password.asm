@@ -2,7 +2,7 @@ BuenaPhoneScript1:
 	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	iftrue BuenaPhoneScript_Rocket
 	checkcode VAR_HOUR
-	ifgreater 17, BuenaPhoneScript_AfterMidnight1
+	ifgreater 17, BuenaPhoneScript_OnAir1
 	scall BuenaPhoneScript_CheckTimeOfDay1
 	jump BuenaPhoneScript_Random1
 
@@ -17,132 +17,132 @@ BuenaPhoneScript_CheckTimeOfDay1:
 	iftrue .morn
 	checktime DAY
 	iftrue .day
-	writetext UnknownText_0xa0d42
+	writetext BuenaPhone1NightText
 	buttonsound
 	end
 
 .morn
-	writetext UnknownText_0xa0c28
+	writetext BuenaPhone1MornText
 	buttonsound
 	end
 
 .day
-	writetext UnknownText_0xa0c72
+	writetext BuenaPhone1DayText
 	buttonsound
 	end
 
-BuenaPhoneScript_AfterMidnight1:
-	writetext UnknownText_0xa0caf
+BuenaPhoneScript_OnAir1:
+	writetext BuenaPhone1OnAirText
 	end
 
 BuenaPhoneScript_CheckTimeOfDay2:
 	checkcode VAR_HOUR
-	ifgreater 17, BuenaPhoneScript_AfterMidnight2
+	ifgreater 17, .on_break
 	checktime MORN
 	iftrue .morn
 	checktime DAY
 	iftrue .day
-	writetext UnknownText_0xa0e29
+	writetext BuenaPhone2NightText
 	buttonsound
 	end
 
 .morn
-	writetext UnknownText_0xa0d96
+	writetext BuenaPhone2MornText
 	buttonsound
 	end
 
 .day
-	writetext UnknownText_0xa0dcf
+	writetext BuenaPhone2DayText
 	buttonsound
 	end
 
-BuenaPhoneScript_AfterMidnight2:
-	writetext UnknownText_0xa0e01
+.on_break:
+	writetext BuenaPhone2OnBreakText
 	buttonsound
 	end
 
 BuenaPhoneScript_Rocket:
-	writetext UnknownText_0xa0e5e
+	writetext BuenaPhoneRocketText
 	end
 
 BuenaPhoneScript_Random2:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .PostE4
 	random 11
-	jump .Jumptable
+	jump .GossipTopics
 
 .PostE4:
 	random 14
 
-.Jumptable:
-	ifequal 0, .zero
-	ifequal 1, .one
-	ifequal 2, .two
-	ifequal 3, .three
-	ifequal 4, .four
-	ifequal 5, .five
-	ifequal 6, .six
-	ifequal 7, .seven
-	ifequal 8, .eight
-	ifequal 9, .nine
-	ifequal 10, .ten
-	ifequal 11, .eleven
-	ifequal 12, .twelve
-	ifequal 13, .thirteen
+.GossipTopics:
+	ifequal 0, .dj_ben
+	ifequal 1, .receptionist
+	ifequal 2, .lucky_number
+	ifequal 3, .weight
+	ifequal 4, .prof_oak
+	ifequal 5, .cold
+	ifequal 6, .radiocard
+	ifequal 7, .pikachu
+	ifequal 8, .director
+	ifequal 9, .tea
+	ifequal 10, .first_pokemon
+	ifequal 11, .lavender_radio
+	ifequal 12, .ben_and_fern
+	ifequal 13, .mary_and_lily
 
-.zero
+.dj_ben
 	writetext UnknownText_0xa0efb
 	jump .finish
 
-.one
+.receptionist
 	writetext UnknownText_0xa0fcf
 	jump .finish
 
-.two
+.lucky_number
 	writetext UnknownText_0xa109d
 	jump .finish
 
-.three
+.weight
 	writetext UnknownText_0xa1143
 	jump .finish
 
-.four
+.prof_oak
 	writetext UnknownText_0xa1244
 	jump .finish
 
-.five
+.cold
 	writetext UnknownText_0xa1318
 	jump .finish
 
-.six
+.radiocard
 	writetext UnknownText_0xa13d8
 	jump .finish
 
-.seven
+.pikachu
 	writetext UnknownText_0xa1488
 	jump .finish
 
-.eight
+.director
 	writetext UnknownText_0xa15de
 	jump .finish
 
-.nine
+.tea
 	writetext UnknownText_0xa1717
 	jump .finish
 
-.ten
+.first_pokemon
 	writetext UnknownText_0xa183d
 	jump .finish
 
-.eleven
+.lavender_radio
 	writetext UnknownText_0xa19b1
 	jump .finish
 
-.twelve
+.ben_and_fern
 	writetext UnknownText_0xa1ac0
 	jump .finish
 
-.thirteen
+.mary_and_lily
 	writetext UnknownText_0xa1bed
 
 .finish
@@ -150,19 +150,19 @@ BuenaPhoneScript_Random2:
 
 BuenaPhoneScript_Random1:
 	random 3
-	ifequal 0, .zero
-	ifequal 1, .one
-	ifequal 2, .two
+	ifequal 0, .game_corner
+	ifequal 1, .pokegear
+	ifequal 2, .weather
 
-.zero
+.game_corner
 	writetext UnknownText_0xa1c88
 	end
 
-.one
+.pokegear
 	writetext UnknownText_0xa1d5f
 	end
 
-.two
+.weather
 	writetext UnknownText_0xa1e2f
 	end
 
